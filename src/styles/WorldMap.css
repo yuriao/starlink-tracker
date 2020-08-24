@@ -1,0 +1,41 @@
+.map-box {
+    position: absolute;
+    height: 900px;
+    width: 1600px;
+    left: 303px;
+    top: 0px;
+}
+
+.map, .track, .spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.map {
+    z-index: 0;
+}
+
+.track {
+    z-index: 1;
+}
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 960px;
+    z-index: 2;
+}
+
+.hint {
+    color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
+}

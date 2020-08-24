@@ -1,0 +1,35 @@
+.sat-list-box{
+    padding: 10px;
+    margin-top: 10px;
+    height: 515px;
+    background-color:  rgba(115,138,154, 0.3);
+    width:325px;
+    z-index: 2;
+}
+
+.sat-list-btn {
+    text-transform: none;
+    padding: 10px 35px;
+    margin-left:63px;
+    margin-top:10px;
+    background-color: #8ea9d9;
+    font-size: 1em;
+    color: #fff;
+    z-index: 2;
+}
+
+.sat-list {
+    height: 395px;
+    overflow: scroll;
+    z-index: 2;
+  }
+
+.sat-list-info {
+    color: #fff;
+    z-index: 2;
+}
+
+.list-item {
+    color: #fff;
+    z-index: 2;
+}

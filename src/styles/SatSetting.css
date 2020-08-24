@@ -1,0 +1,75 @@
+.sat-setting {
+    text-align: left;
+    padding: 10px;
+}
+
+.setting-list {
+    color: #ababab;
+    margin-bottom: 8px;
+}
+
+.setting-label {
+    color: #ffffff;
+    font-size: 1.10em;
+    margin-bottom: 10px;
+}
+
+.two-item-col {
+    display: flex;
+}
+
+.list-item label, .altitude-setting span{
+    font-size: 1em;
+}
+
+.right-item {
+    margin-left: 16px;
+}
+
+.duration-setting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.duration-slider {
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 2;
+}
+
+.ant-slider-handle{
+    border: solid 2px #1f6099;
+    z-index: 2;
+}
+.ant-slider-track{
+    background-color: #1f6099;
+    z-index: 2;
+}
+.ant-slider:hover .ant-slider-track{
+    background-color: #1f6099;
+    z-index: 2;
+}
+
+.sat-setting{
+    background-color: rgba(115,138,154, 0.3);
+    z-index: 2;
+}
+/*nearby button*/
+.show-nearby {
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+    z-index: 2;
+}
+
+.show-nearby-btn {
+    text-transform: none;
+    padding: 10px 22px;
+    background-color: #8ea9d9;
+    font-size: 1em;
+    color: #fff;
+    z-index: 2;
+}
