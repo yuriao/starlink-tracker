@@ -1,3 +1,6 @@
+## Starlink-tracker: 
+Node.js powered SpaceX starlink satellite position tracker using React.js for frontend\
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
