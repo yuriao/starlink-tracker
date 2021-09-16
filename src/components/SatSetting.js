@@ -8,7 +8,7 @@ class SatSetting extends Component {
         this.state = {
             observerLat: 39,
             observerLong: 95,
-            observerAlt: 0,
+            observerAlt: 520,
             observerRadius: 100
         }
     }
