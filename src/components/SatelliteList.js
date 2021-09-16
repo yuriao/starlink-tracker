@@ -7,7 +7,7 @@ class SatelliteList extends Component {
     constructor(){
         super();
         this.state = { // maintain the data sent by satsetting button
-            duration:0
+            duration:100
         }
     }
     
