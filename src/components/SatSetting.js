@@ -6,10 +6,10 @@ class SatSetting extends Component {
     constructor(){
         super();
         this.state = {
-            observerLat: 0,
-            observerLong: 0,
+            observerLat: 39,
+            observerLong: 95,
             observerAlt: 0,
-            observerRadius: 0
+            observerRadius: 100
         }
     }
 
