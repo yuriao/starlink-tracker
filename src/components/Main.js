@@ -38,6 +38,7 @@ class Main extends Component {
         })
         Axios.get(url) // Axios is a library that handles Ajax response. it use promise object (ES6 feature) (then, catch)
             .then(response => {//Ajax: step stacks. as JS is single thread, the steps are put into a stack and Ajax call is put into deeper levels of stack, calls until conditions meet
+                this.header("Access-Control-Allow-Origin", "true");
                 this.setState({
                     satInfo: response.data,
                     loadingSatellites: false,
@@ -71,7 +72,8 @@ class Main extends Component {
                 return args.map(item => item.data);
             })
           )
-          .then( res => {
+          .then(res => {
+              this.header("Access-Control-Allow-Origin", "true");
               this.setState({
                   satPositions: res,
                   loadingSatPositions: false,
