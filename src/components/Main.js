@@ -43,7 +43,8 @@ class Main extends Component {
                     satInfo: response.data,
                     loadingSatellites: false,
                     selected:[] // makesure after re-find the perviously selected is cleared 
-                })
+                });
+                console.log(response)
             })
             .catch(error => {
                 console.log('err in fetch satellite -> ', error);
