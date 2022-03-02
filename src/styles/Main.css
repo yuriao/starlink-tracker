@@ -1,18 +1,23 @@
 .main {
     position: absolute;
-    height: 900px;
+    height: 100%;
 }
 
 .left-side {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 900px;
+    top: 80px;
+    left: 0px;
+    height: 90%;
     padding: 15px 20px;
     background-color: #1a2048;
     z-index: 2;
 }
 
 .right-side {
-    margin-left: 0px;
+    position: absolute;
+    top: -30px;
+    left: 150px;
+    height:90%;
+    width: 100%
+
 }
