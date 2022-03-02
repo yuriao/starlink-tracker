@@ -6,11 +6,31 @@ class SatSetting extends Component {
     constructor(){
         super();
         this.state = {
-            observerLat: 39,
-            observerLong: 95,
-            observerAlt: 520,
-            observerRadius: 100
+            observerLat: 0,
+            observerLong: 0,
+            observerAlt: 0,
+            observerRadius: 60
         }
+    }
+
+    getDefaultPos = ()=>{
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(
+                position=> {
+                    this.setState({
+                        observerLong: position.coords.longitude,
+                        observerLat: position.coords.latitude,
+                    })
+                }
+            );
+        }else{
+            console.log('location grabbing denied')
+        }
+        
+    }
+
+    setDefaultPos = (position) => {
+        
     }
 
     onChangeLong = (value) => {
@@ -45,7 +65,12 @@ class SatSetting extends Component {
         this.props.onShow(this.state); // from Main
     }
 
+    componentDidMount() {
+        this.getDefaultPos();
+    }
+
     render() {
+        
         return (
             <div className="sat-setting">
                 <div className="loc-setting">
@@ -57,7 +82,7 @@ class SatSetting extends Component {
                             <InputNumber // InputNumber is an AntDesign React component
                                 min={-180}
                                 max={180}
-                                defaultValue={0}
+                                defaultValue={this.state.observerLong}
                                 style={{margin: "0 45px"}}
                                 onChange={this.onChangeLong}
                                 className="inputbox"
@@ -72,7 +97,7 @@ class SatSetting extends Component {
                                 placeholder="latitude"
                                 min={-90}
                                 max={90}
-                                defaultValue={0}
+                                defaultValue={this.state.observerLat}
                                 style={{margin: "0 57px"}}
                                 onChange={this.onChangeLat}
                             />
@@ -85,7 +110,7 @@ class SatSetting extends Component {
                             <InputNumber
                                 min={-413}
                                 max={8850}
-                                defaultValue={0}
+                                defaultValue={this.state.observerAlt}
                                 style={{margin: "0 8px"}}
                                 onChange={this.onChangeAlt}
                             />
@@ -99,7 +124,7 @@ class SatSetting extends Component {
                             <InputNumber
                                 min={0}
                                 max={90}
-                                defaultValue={0}
+                                defaultValue={this.state.observerRadius}
                                 style={{margin: "0 24px"}}
                                 onChange={this.onChangeRadius}
                             />

@@ -36,9 +36,23 @@ class Main extends Component {
         this.setState({
             loadingSatellites: true,
         })
+        
+        // 03012022 handle CORS error, not work
+       // Axios.interceptors.response.use(
+        //    function (res) {
+        //      res.headers("Access-Control-Allow-Origin", "*");
+        //      res.headers('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+        //      res.headers('Access-Control-Allow-Headers', 'Content-Type');
+        //      console.log(res);
+        //      return res;
+        //    },
+        //    (err) => {
+        //      return Promise.reject(err);
+        //    }
+        //);
+
         Axios.get(url) // Axios is a library that handles Ajax response. it use promise object (ES6 feature) (then, catch)
-            .then(response => {//Ajax: step stacks. as JS is single thread, the steps are put into a stack and Ajax call is put into deeper levels of stack, calls until conditions meet
-                this.header("Access-Control-Allow-Origin", "true");
+            .then(response => {//Ajax: step stacks. as JS is single thread, the steps are put into a stack and Ajax call is put into deeper levels of stack, calls until conditions meet 
                 this.setState({
                     satInfo: response.data,
                     loadingSatellites: false,
@@ -47,7 +61,7 @@ class Main extends Component {
                 
             })
             .catch(error => {
-                console.log(response)
+                //console.log(response)
                 console.log('err in fetch satellite -> ', error);
                 this.setState({
                     loadingSatellites: false,
@@ -75,7 +89,6 @@ class Main extends Component {
             })
           )
           .then(res => {
-              this.header("Access-Control-Allow-Origin", "true");
               this.setState({
                   satPositions: res,
                   loadingSatPositions: false,
