@@ -65,7 +65,7 @@ class SatSetting extends Component {
         this.props.onShow(this.state); // from Main
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.getDefaultPos();
     }
 
